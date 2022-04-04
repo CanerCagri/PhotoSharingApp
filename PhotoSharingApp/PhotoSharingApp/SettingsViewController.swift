@@ -6,18 +6,21 @@
 //
 
 import UIKit
+import Firebase
 
 class SettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
     @IBAction func logoutBtnTapped(_ sender: Any) {
-        performSegue(withIdentifier: "toVC", sender: nil)
+        do {
+            try Auth.auth().signOut()
+            performSegue(withIdentifier: "toVC", sender: nil)
+        }catch {
+            print("Error when logout")
+        }
     }
     
 }

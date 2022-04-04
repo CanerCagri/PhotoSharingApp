@@ -41,7 +41,7 @@
                                     <constraint firstAttribute="width" constant="89" id="DF0-Yb-9Bo"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Login">
+                                <buttonConfiguration key="configuration" style="plain" title="Log In">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -49,12 +49,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lsa-pa-Liq">
-                                <rect key="frame" x="295" y="406" width="99" height="64"/>
+                                <rect key="frame" x="168" y="406" width="226" height="64"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="99" id="Oja-JX-yjv"/>
+                                    <constraint firstAttribute="width" constant="226" id="Oja-JX-yjv"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Signup">
+                                <buttonConfiguration key="configuration" style="plain" title="New Account">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -135,14 +135,49 @@
                     <view key="view" contentMode="scaleToFill" id="51B-Hg-ZqN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xHB-8J-cri">
+                                <rect key="frame" x="20" y="44" width="374" height="256"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="256" id="CRe-wZ-J0Y"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Comment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1EH-K3-MxA">
+                                <rect key="frame" x="20" y="337" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="nmA-eT-2fC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQ4-0H-HYQ">
+                                <rect key="frame" x="162" y="418" width="91" height="61"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Upload">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dcR-wE-FKI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xHB-8J-cri" firstAttribute="top" secondItem="dcR-wE-FKI" secondAttribute="top" id="6Y2-af-qDW"/>
+                            <constraint firstItem="mQ4-0H-HYQ" firstAttribute="leading" secondItem="dcR-wE-FKI" secondAttribute="leading" constant="162" id="9Yo-da-Nlt"/>
+                            <constraint firstItem="xHB-8J-cri" firstAttribute="trailing" secondItem="51B-Hg-ZqN" secondAttribute="trailingMargin" id="B7U-Ij-lgd"/>
+                            <constraint firstItem="1EH-K3-MxA" firstAttribute="centerX" secondItem="mQ4-0H-HYQ" secondAttribute="centerX" id="Fbf-MY-QOE"/>
+                            <constraint firstItem="mQ4-0H-HYQ" firstAttribute="top" secondItem="1EH-K3-MxA" secondAttribute="bottom" constant="47" id="MBp-2P-6RZ"/>
+                            <constraint firstItem="xHB-8J-cri" firstAttribute="leading" secondItem="51B-Hg-ZqN" secondAttribute="leadingMargin" id="SQc-Jc-uAH"/>
+                            <constraint firstItem="1EH-K3-MxA" firstAttribute="top" secondItem="xHB-8J-cri" secondAttribute="bottom" constant="37" id="b4M-WS-zbo"/>
+                            <constraint firstItem="mQ4-0H-HYQ" firstAttribute="centerY" secondItem="51B-Hg-ZqN" secondAttribute="centerY" id="ffP-1n-MXG"/>
+                            <constraint firstItem="xHB-8J-cri" firstAttribute="trailing" secondItem="1EH-K3-MxA" secondAttribute="trailing" id="nuv-9d-jwu"/>
+                            <constraint firstItem="xHB-8J-cri" firstAttribute="leading" secondItem="1EH-K3-MxA" secondAttribute="leading" id="pQ7-wP-p8p"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Upload" image="star" catalog="system" id="7pb-61-CEX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T24-lt-rCu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1796" y="396"/>
+            <point key="canvasLocation" x="1795.6521739130437" y="395.75892857142856"/>
         </scene>
         <!--Feed-->
         <scene sceneID="QfF-li-Ums">
@@ -163,7 +198,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="AFZ-MT-h9B">
             <objects>
-                <tabBarController id="iDk-rK-aPF" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar" id="iDk-rK-aPF" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="3ef-vE-bbP"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RIs-hk-rlc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
